@@ -100,7 +100,7 @@ function tick(){
  if(cur){$("hl").textContent="Идёт сейчас";$("ht").textContent=cur[2];$("hr").textContent="ауд. "+cur[3];$("hm").textContent="до "+cur[1]}
  else if(n){
   var w=n.diff>=60?Math.floor(n.diff/60)+" ч "+(n.diff%60)+" мин":n.diff+" мин";
-  $("hl").textContent="Дальше"+(n.day?" ("+D[(now.getDay()+n.day)%7]+")":"");
+  $("hl").textContent=h+(n.day?" ("+D[(now.getDay()+n.day)%7]+")":"");
   $("ht").textContent=n.x[2];$("hr").textContent="ауд. "+n.x[3];$("hm").textContent="в "+n.x[0]+" · через "+w;
  }
  L.forEach(function(x){
